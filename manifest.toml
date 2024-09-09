@@ -1,0 +1,80 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "conduwuit"
+name = "Conduwuit"
+description.en = "Simple, fast and reliable chat server powered by Matrix"
+description.fr = "Serveur de chat simple, rapide et fiable alimenté par Matrix"
+
+version = "0.4.6~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "free"
+website = "https://conduwuit.puppyirl.gay/"
+demo = "https://demo.example.com"
+admindoc = "https://yunohost.org/packaging_apps"
+code = "https://github.com/girlbossceo/conduwuit"
+
+[integration]
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+    [install.language]
+    ask.en = "Choose the application language"
+    ask.fr = "Choisissez la langue de l'application"
+    type = "select"
+    choices = ["fr", "en"]
+    default = "fr"
+
+    [install.admin]
+    type = "user"
+
+    [install.password]
+    help.en = "Use the help field to add an information for the admin about this question."
+    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
+    type = "password"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    in_subdir = false
+    extract = false
+    rename = "conduwuit"
+    url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.4.6/static-x86_64-unknown-linux-musl"
+    sha256 = "c084f045abef697de39e61ac475f95fa4ee9d27a2a0f448d41222d711ae0e22c"
+
+    # autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.data_dir]
+    
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
