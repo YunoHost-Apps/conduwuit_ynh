@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **Versión actual:** 0.4.6~ynh1
 
-**Demo:** <https://demo.example.com>
-
 ## Capturas
 
 ![Captura de Conduwuit](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Documentaciones y recursos
 
 - Sitio web oficial: <https://conduwuit.puppyirl.gay/>
-- Documentación administrador oficial: <https://yunohost.org/packaging_apps>
+- Documentación administrador oficial: <https://conduwuit.puppyirl.gay/>
 - Repositorio del código fuente oficial de la aplicación : <https://github.com/girlbossceo/conduwuit>
 - Catálogo YunoHost: <https://apps.yunohost.org/app/conduwuit>
 - Reportar un error: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

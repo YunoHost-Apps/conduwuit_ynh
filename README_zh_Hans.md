@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **分发版本：** 0.4.6~ynh1
 
-**演示：** <https://demo.example.com>
-
 ## 截图
 
 ![Conduwuit 的截图](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## 文档与资源
 
 - 官方应用网站： <https://conduwuit.puppyirl.gay/>
-- 官方管理文档： <https://yunohost.org/packaging_apps>
+- 官方管理文档： <https://conduwuit.puppyirl.gay/>
 - 上游应用代码库： <https://github.com/girlbossceo/conduwuit>
 - YunoHost 商店： <https://apps.yunohost.org/app/conduwuit>
 - 报告 bug： <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **Shipped version:** 0.4.6~ynh1
 
-**Demo:** <https://demo.example.com>
-
 ## Screenshots
 
 ![Screenshot of Conduwuit](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Documentation and resources
 
 - Official app website: <https://conduwuit.puppyirl.gay/>
-- Official admin documentation: <https://yunohost.org/packaging_apps>
+- Official admin documentation: <https://conduwuit.puppyirl.gay/>
 - Upstream app code repository: <https://github.com/girlbossceo/conduwuit>
 - YunoHost Store: <https://apps.yunohost.org/app/conduwuit>
 - Report a bug: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

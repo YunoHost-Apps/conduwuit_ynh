@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **Versi terkirim:** 0.4.6~ynh1
 
-**Demo:** <https://demo.example.com>
-
 ## Tangkapan Layar
 
 ![Tangkapan Layar pada Conduwuit](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Dokumentasi dan sumber daya
 
 - Website aplikasi resmi: <https://conduwuit.puppyirl.gay/>
-- Dokumentasi admin resmi: <https://yunohost.org/packaging_apps>
+- Dokumentasi admin resmi: <https://conduwuit.puppyirl.gay/>
 - Depot kode aplikasi hulu: <https://github.com/girlbossceo/conduwuit>
 - Gudang YunoHost: <https://apps.yunohost.org/app/conduwuit>
 - Laporkan bug: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

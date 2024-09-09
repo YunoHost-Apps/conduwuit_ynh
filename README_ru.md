@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **Поставляемая версия:** 0.4.6~ynh1
 
-**Демо-версия:** <https://demo.example.com>
-
 ## Снимки экрана
 
 ![Снимок экрана Conduwuit](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Документация и ресурсы
 
 - Официальный веб-сайт приложения: <https://conduwuit.puppyirl.gay/>
-- Официальная документация администратора: <https://yunohost.org/packaging_apps>
+- Официальная документация администратора: <https://conduwuit.puppyirl.gay/>
 - Репозиторий кода главной ветки приложения: <https://github.com/girlbossceo/conduwuit>
 - Магазин YunoHost: <https://apps.yunohost.org/app/conduwuit>
 - Сообщите об ошибке: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>
