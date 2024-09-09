@@ -7,6 +7,9 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+federation="true"
+ynh_app_setting_set --key=federation --value=$federation
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
