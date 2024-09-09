@@ -77,7 +77,7 @@ server_name = "__SERVER_NAME__"
 
 # This is the only directory where conduwuit will save its data, including media.
 # Note: this was previously "/var/lib/matrix-conduit"
-database_path = "__DATA_DIR__/"
+database_path = "__INSTALL_DIR__/"
 
 # Database backend: Only rocksdb is supported.
 database_backend = "rocksdb"
