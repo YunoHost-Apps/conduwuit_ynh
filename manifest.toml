@@ -12,10 +12,9 @@ version = "0.4.6~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
+license = "Apache-2.0"
 website = "https://conduwuit.puppyirl.gay/"
-demo = "https://demo.example.com"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://conduwuit.puppyirl.gay/"
 code = "https://github.com/girlbossceo/conduwuit"
 
 [integration]
@@ -54,7 +53,7 @@ ram.runtime = "50M"
     help.en = "If no, accounts should be registered by an admin after defining a secret. If yes, to protect your server and the federation from spammer, federation will be deactived by default. You must Activate CAPTCHA verification before federation reactivation. See Config Panel for instructions"
     help.fr = "Si non, les comptes seront créés par un admin après avoir défini un secret. Si oui, la fédération sera désactivée pour protéger la fédération et vous des spammeurs. Activez la vérification par CAPTCHA avant de réactiver la fédération ! Voir les instructions dans le Config Panel"
     default = false
-    
+
 [resources]
 
     [resources.sources]
