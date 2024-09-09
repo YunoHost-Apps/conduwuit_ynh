@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **Geleverde versie:** 0.4.6~ynh1
 
-**Demo:** <https://demo.example.com>
-
 ## Schermafdrukken
 
 ![Schermafdrukken van Conduwuit](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Documentatie en bronnen
 
 - Officiele website van de app: <https://conduwuit.puppyirl.gay/>
-- Officiele beheerdersdocumentatie: <https://yunohost.org/packaging_apps>
+- Officiele beheerdersdocumentatie: <https://conduwuit.puppyirl.gay/>
 - Upstream app codedepot: <https://github.com/girlbossceo/conduwuit>
 - YunoHost-store: <https://apps.yunohost.org/app/conduwuit>
 - Meld een bug: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

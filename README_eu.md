@@ -21,8 +21,6 @@ This is a dummy description of this app features
 
 **Paketatutako bertsioa:** 0.4.6~ynh1
 
-**Demoa:** <https://demo.example.com>
-
 ## Pantaila-argazkiak
 
 ![Conduwuit(r)en pantaila-argazkia](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Dokumentazioa eta baliabideak
 
 - Aplikazioaren webgune ofiziala: <https://conduwuit.puppyirl.gay/>
-- Administratzaileen dokumentazio ofiziala: <https://yunohost.org/packaging_apps>
+- Administratzaileen dokumentazio ofiziala: <https://conduwuit.puppyirl.gay/>
 - Jatorrizko aplikazioaren kode-gordailua: <https://github.com/girlbossceo/conduwuit>
 - YunoHost Denda: <https://apps.yunohost.org/app/conduwuit>
 - Eman errore baten berri: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

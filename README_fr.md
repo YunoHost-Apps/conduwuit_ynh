@@ -21,8 +21,6 @@ Ceci est une fausse description des fonctionalités de l'app
 
 **Version incluse :** 0.4.6~ynh1
 
-**Démo :** <https://demo.example.com>
-
 ## Captures d’écran
 
 ![Capture d’écran de Conduwuit](./doc/screenshots/example.jpg)
@@ -30,7 +28,7 @@ Ceci est une fausse description des fonctionalités de l'app
 ## Documentations et ressources
 
 - Site officiel de l’app : <https://conduwuit.puppyirl.gay/>
-- Documentation officielle de l’admin : <https://yunohost.org/packaging_apps>
+- Documentation officielle de l’admin : <https://conduwuit.puppyirl.gay/>
 - Dépôt de code officiel de l’app : <https://github.com/girlbossceo/conduwuit>
 - YunoHost Store : <https://apps.yunohost.org/app/conduwuit>
 - Signaler un bug : <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>
