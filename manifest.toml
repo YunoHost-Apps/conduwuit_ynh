@@ -40,21 +40,6 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "select"
-    choices = ["fr", "en"]
-    default = "fr"
-
-    [install.admin]
-    type = "user"
-
-    [install.password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
-
 [resources]
 
     [resources.sources]
