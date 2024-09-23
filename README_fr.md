@@ -16,7 +16,8 @@ Il NE doit PAS être modifié à la main.
 
 ## Vue d’ensemble
 
-Ceci est une fausse description des fonctionalités de l'app
+Conduwuit est une implémentation de serveur open source légère de la spécification Matrix avec un accent sur une configuration facile et des exigences système faibles. Cela signifie que vous pouvez créer votre propre configuration Conduit en quelques minutes seulement.
+Conduit garde les choses simples, c'est un binaire unique avec une base de données intégrée et peut être beaucoup plus rapide que d'autres implémentations de serveur dans certains cas.
 
 
 **Version incluse :** 0.4.6~ynh1
