@@ -32,7 +32,7 @@ server_name = "__SERVER_NAME__"
 #
 # (Currently, conduwuit doesn't support batched key requests, so this list should only contain Synapse servers)
 # Defaults to `matrix.org`
-# trusted_servers = ["matrix.org"]
+trusted_servers = ["matrix.org"]
 
 # Sentry.io crash/panic reporting, performance monitoring/metrics, etc. This is NOT enabled by default.
 # conduwuit's default Sentry reporting endpoint is o4506996327251968.ingest.us.sentry.io
@@ -370,7 +370,7 @@ allow_profile_lookup_federation_requests = true
 # for any new announcements made. Despite the name, this is not an update check
 # endpoint, it is simply an announcement check endpoint.
 # Defaults to false.
-#allow_check_for_updates = false
+allow_check_for_updates = true
 
 # Set to false to disable users from joining or creating room versions that aren't 100% officially supported by conduwuit.
 # conduwuit officially supports room versions 6 - 10. conduwuit has experimental/unstable support for 3 - 5, and 11.
