@@ -17,19 +17,8 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod 750 "$install_dir"
-chown -R "$app:$app" "$install_dir"
+chown -R $app:root "$install_dir"
 chmod +x "$install_dir/conduwuit"
-
-#=================================================
-# APP INITIAL CONFIGURATION
-#=================================================
-ynh_script_progression "Adding $app's configuration files..."
-
-ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
-
-chmod 400 "$install_dir/conduwuit.toml"
-chown "$app:$app" "$install_dir/conduwuit.toml"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -47,6 +36,16 @@ ynh_config_add_nginx
 ynh_config_add_systemd
 
 yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
+
+chmod 400 "$install_dir/conduwuit.toml"
+chown "$app:$app" "$install_dir/conduwuit.toml"
 
 #=================================================
 # START SYSTEMD SERVICE
