@@ -16,12 +16,11 @@ Il NE doit PAS être modifié à la main.
 
 ## Vue d’ensemble
 
-Ceci est une fausse description des fonctionalités de l'app
+Conduwuit est une implémentation de serveur open source légère de la spécification Matrix avec un accent sur une configuration facile et des exigences système faibles. Cela signifie que vous pouvez créer votre propre configuration Conduit en quelques minutes seulement.
+Conduit garde les choses simples, c'est un binaire unique avec une base de données intégrée et peut être beaucoup plus rapide que d'autres implémentations de serveur dans certains cas.
 
 
 **Version incluse :** 0.4.6~ynh1
-
-**Démo :** <https://demo.example.com>
 
 ## Captures d’écran
 
@@ -30,7 +29,7 @@ Ceci est une fausse description des fonctionalités de l'app
 ## Documentations et ressources
 
 - Site officiel de l’app : <https://conduwuit.puppyirl.gay/>
-- Documentation officielle de l’admin : <https://yunohost.org/packaging_apps>
+- Documentation officielle de l’admin : <https://conduwuit.puppyirl.gay/>
 - Dépôt de code officiel de l’app : <https://github.com/girlbossceo/conduwuit>
 - YunoHost Store : <https://apps.yunohost.org/app/conduwuit>
 - Signaler un bug : <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>
