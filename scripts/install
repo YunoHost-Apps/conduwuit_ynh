@@ -40,6 +40,9 @@ ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
 
+chmod 400 "$install_dir/conduit.toml"
+chown $app:root "$install_dir/conduit.toml"
+
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
