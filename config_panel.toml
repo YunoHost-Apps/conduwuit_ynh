@@ -1,0 +1,23 @@
+version = "1.0"
+
+[main]
+name = "Conduwuit configuration"
+services = ["__APP__"]
+
+    [main.registration]
+    name = "User registration"
+
+        [main.registration.registration]
+        ask = "Should registration be enabled?"
+        type = "boolean"
+        yes = "true"
+        no = "false"
+        bind = "allow_registration:__INSTALL_DIR__/conduwuit.toml"
+
+        [main.registration.federation]
+        ask = "Allow Federation"
+        type = "boolean"
+        yes = "true"
+        no = "false"
+        help = "Communicate with other homeservers of the Matrix Federation."
+        bind = "allow_federation:__INSTALL_DIR__/conduwuit.toml"

@@ -16,12 +16,10 @@ Hij mag NIET handmatig aangepast worden.
 
 ## Overzicht
 
-This is a dummy description of this app features
-
+Conduwuit is a lightweight open-source server implementation of the Matrix Specification with a focus on easy setup and low system requirements. That means you can make your own Conduit setup in just a few minutes.
+Conduit keeps things simple, it's a single binary with an embedded database and can be much faster than other server implementations in some cases.
 
 **Geleverde versie:** 0.4.6~ynh1
-
-**Demo:** <https://demo.example.com>
 
 ## Schermafdrukken
 
@@ -30,7 +28,7 @@ This is a dummy description of this app features
 ## Documentatie en bronnen
 
 - Officiele website van de app: <https://conduwuit.puppyirl.gay/>
-- Officiele beheerdersdocumentatie: <https://yunohost.org/packaging_apps>
+- Officiele beheerdersdocumentatie: <https://conduwuit.puppyirl.gay/>
 - Upstream app codedepot: <https://github.com/girlbossceo/conduwuit>
 - YunoHost-store: <https://apps.yunohost.org/app/conduwuit>
 - Meld een bug: <https://github.com/YunoHost-Apps/conduwuit_ynh/issues>

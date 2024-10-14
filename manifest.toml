@@ -12,10 +12,9 @@ version = "0.4.6~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
+license = "Apache-2.0"
 website = "https://conduwuit.puppyirl.gay/"
-demo = "https://demo.example.com"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://conduwuit.puppyirl.gay/"
 code = "https://github.com/girlbossceo/conduwuit"
 
 [integration]
@@ -40,20 +39,20 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "select"
-    choices = ["fr", "en"]
-    default = "fr"
+    [install.server_name]
+    ask.en = "Select the display name for your Conduwuit server"
+    ask.fr = "Sélectionnez le nom d'affichage pour votre serveur Conduwuit"
+    help.en = "If you choose domain.tld, your Matrix user-ids will be looking like @user:domain.tld instead of @user:conduit.domain.tld"
+    help.fr = "Si vous choisissez domain.tld, vos identifiants Matrix ressembleront à @utilisateur:domain.tld plutôt que @utilisateur:conduit.domain.tld"
+    type = "domain"
 
-    [install.admin]
-    type = "user"
-
-    [install.password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
+    [install.registration]
+    ask.en = "Should the server allow any visitor to register as a user?"
+    ask.fr = "Le serveur doit-il permettre à quiconque de s'enregistrer comme utilisateur ?"
+    type = "boolean"
+    help.en = "If no, accounts should be registered by an admin after defining a secret. If yes, to protect your server and the federation from spammer, federation will be deactived by default. You must Activate CAPTCHA verification before federation reactivation. See Config Panel for instructions"
+    help.fr = "Si non, les comptes seront créés par un admin après avoir défini un secret. Si oui, la fédération sera désactivée pour protéger la fédération et vous des spammeurs. Activez la vérification par CAPTCHA avant de réactiver la fédération ! Voir les instructions dans le Config Panel"
+    default = false
 
 [resources]
 
@@ -76,5 +75,20 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
+    main.show_tile = false
+
+    server_api.url = "__DOMAIN__/_matrix"
+    server_api.label = "Server access for client apps."
+    server_api.show_tile = false
+    server_api.allowed = "visitors"
+    server_api.auth_header = false
+    server_api.protected = true
+
+    server_client_infos.url = "__SERVER_NAME__/.well-known/matrix"
+    server_client_infos.label = "Server info for federation. (well-known)"
+    server_client_infos.show_tile = false
+    server_client_infos.allowed = "visitors"
+    server_client_infos.auth_header = false
+    server_client_infos.protected = true
 
     [resources.ports]

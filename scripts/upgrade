@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -21,18 +17,8 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="conduwuit.toml"
 
-chown -R "$app:root" "$install_dir"
+chown -R $app:root "$install_dir"
 chmod +x "$install_dir/conduwuit"
-
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-ynh_script_progression "Updating $app's configuration files..."
-
-ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
-
-chmod 400 "$install_dir/conduwuit.toml"
-chown "$app:$app" "$install_dir/conduwuit.toml"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -49,7 +35,17 @@ fi
 
 ynh_config_add_systemd
 
-yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="Chat server powered by Matrix" --log="/var/log/$app/$app.log"
+
+#=================================================
+# UPDATE A CONFIG FILE
+#=================================================
+ynh_script_progression "Updating $app's configuration files..."
+
+ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
+
+chmod 400 "$install_dir/conduwuit.toml"
+chown "$app:$app" "$install_dir/conduwuit.toml"
 
 #=================================================
 # START SYSTEMD SERVICE
