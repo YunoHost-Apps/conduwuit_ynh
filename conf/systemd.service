@@ -1,10 +1,10 @@
 [Unit]
-Description=Conduwuit: Matrix server
+Description=Conduwuit: Matrix homeserver
 Documentation=https://conduwuit.puppyirl.gay/
 After=network-online.target
 
 [Service]
-Type=simple
+Type=notify
 User=__APP__
 Group=__APP__
 Type=notify

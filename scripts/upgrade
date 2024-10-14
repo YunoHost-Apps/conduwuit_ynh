@@ -35,7 +35,7 @@ fi
 
 ynh_config_add_systemd
 
-yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="Chat server powered by Matrix" --log="/var/log/$app/$app.log"
 
 #=================================================
 # UPDATE A CONFIG FILE
