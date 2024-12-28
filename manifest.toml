@@ -57,13 +57,6 @@ ram.runtime = "50M"
     help.fr = "Si non, les comptes seront créés par un admin après avoir défini un secret. Si oui, la fédération sera désactivée pour protéger la fédération et vous des spammeurs. Activez la vérification par CAPTCHA avant de réactiver la fédération ! Voir les instructions dans le Config Panel"
     default = false
 
-    [main.registration.registration_token]
-    type = "string"
-    visible = "registration"
-    ask.en = "What should your registration token be? (leave blank to generate a random one)"
-    help.en = "This is essentially a password that registering users must input before they can create an account"
-    optional = true
-
 [resources]
 
     [resources.sources]

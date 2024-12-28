@@ -10,6 +10,5 @@ else
     registration="false"
 fi
 
-if [[ -z "$registration_token" ]]; then
-   registration_token=$(ynh_string_random --length=8)
-fi
+registration_token=$(ynh_string_random --length=8)
+ynh_app_setting_set --key=registration_token --value=$registration_token
