@@ -20,7 +20,7 @@ registration_token=$(ynh_string_random --length=8)
 #=================================================
 
 ynh_app_setting_set --app=$app --key=federation --value=$federation
-ynh_app_setting_set --key=registration_token --value="$registration_token"
+ynh_app_setting_set --key=registration_token --value=$registration_token
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -62,9 +62,9 @@ yunohost service add $app --description="Chat server powered by Matrix" --log="/
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-# ynh_script_progression "Starting $app's systemd service..."
+ynh_script_progression "Starting $app's systemd service..."
 
-# nh_systemctl --service="$app" --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT
