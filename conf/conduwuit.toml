@@ -79,9 +79,6 @@ trusted_servers = ["matrix.org"]
 # Note: this was previously "/var/lib/matrix-conduit"
 database_path = "__INSTALL_DIR__/db"
 
-# Database backend: Only rocksdb is supported.
-database_backend = "rocksdb"
-
 
 ### Network
 
