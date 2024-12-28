@@ -8,14 +8,21 @@ services = ["__APP__"]
     name = "User registration"
 
         [main.registration.registration]
-        ask = "Should registration be enabled?"
+        ask.en = "Should registration be enabled?"
         type = "boolean"
         yes = "true"
         no = "false"
         bind = "allow_registration:__INSTALL_DIR__/conduwuit.toml"
 
+        [main.registration.registration_token]
+        ask.en = "What should your registration token be?"
+        visible = "registration"
+        type = "string"
+        bind = "registration_token:__INSTALL_DIR__/conduwuit.toml"
+        default = "__REGISTRATION_TOKEN__"
+
         [main.registration.federation]
-        ask = "Allow Federation"
+        ask.en = "Allow Federation"
         type = "boolean"
         yes = "true"
         no = "false"

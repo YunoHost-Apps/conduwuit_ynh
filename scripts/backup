@@ -1,9 +1,16 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
 source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
-ynh_print_info "Declaring files to be backed up..."
+#=================================================
+# DECLARE DATA AND CONF FILES TO BACKUP
+#=================================================
+ynh_print_info --message="Declaring files to be backed up..."
 
 #=================================================
 # BACKUP THE APP MAIN DIR
@@ -12,18 +19,17 @@ ynh_print_info "Declaring files to be backed up..."
 ynh_backup "$install_dir"
 
 #=================================================
-# BACKUP THE DATA DIR
-#=================================================
-
-ynh_backup "$data_dir"
-
-#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 
 ynh_backup "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_backup "/etc/systemd/system/$app.service"
+
+# Backup only server name config if it exist
+if [ -e "/etc/nginx/conf.d/${server_name}.d/${app}_server_name.conf" ]; then
+    ynh_backup "/etc/nginx/conf.d/${server_name}.d/${app}_server_name.conf"
+fi
 
 #=================================================
 # END OF SCRIPT

@@ -7,21 +7,22 @@ name = "Conduwuit"
 description.en = "Simple, fast and reliable chat server powered by Matrix"
 description.fr = "Serveur de chat simple, rapide et fiable alimenté par Matrix"
 
-version = "0.4.6~ynh1"
+version = "v0.5.0-rc~ynh1"
 
 maintainers = ["eric_G"]
 
 [upstream]
-license = "Apache-2.0"
+license = " Apache-2.0"
 website = "https://conduwuit.puppyirl.gay/"
-admindoc = "https://conduwuit.puppyirl.gay/"
+demo = "https://transfem.dev"
+admindoc = "https://conduwuit.puppyirl.gay"
 code = "https://github.com/girlbossceo/conduwuit"
 
 [integration]
 yunohost = ">= 11.2.30"
 helpers_version = "2.1"
-architectures = "all"
-multi_instance = true
+architectures = [ "arm64", "amd64" ]
+multi_instance = false
 
 ldap = false
 
@@ -38,53 +39,66 @@ ram.runtime = "50M"
     [install.init_main_permission]
     type = "group"
     default = "visitors"
+    help.en = "If you want to be able to federate with other servers, you should keep the default choice, visitors"
+    help.fr = "Si vous souhaitez pouvoir fédérer votre serveur avec d'autres, vous devez laisser le choix par défaut, visiteurs"
 
     [install.server_name]
+    type = "domain"
     ask.en = "Select the display name for your Conduwuit server"
     ask.fr = "Sélectionnez le nom d'affichage pour votre serveur Conduwuit"
     help.en = "If you choose domain.tld, your Matrix user-ids will be looking like @user:domain.tld instead of @user:conduit.domain.tld"
     help.fr = "Si vous choisissez domain.tld, vos identifiants Matrix ressembleront à @utilisateur:domain.tld plutôt que @utilisateur:conduit.domain.tld"
-    type = "domain"
 
     [install.registration]
+    type = "boolean"
     ask.en = "Should the server allow any visitor to register as a user?"
     ask.fr = "Le serveur doit-il permettre à quiconque de s'enregistrer comme utilisateur ?"
-    type = "boolean"
     help.en = "If no, accounts should be registered by an admin after defining a secret. If yes, to protect your server and the federation from spammer, federation will be deactived by default. You must Activate CAPTCHA verification before federation reactivation. See Config Panel for instructions"
     help.fr = "Si non, les comptes seront créés par un admin après avoir défini un secret. Si oui, la fédération sera désactivée pour protéger la fédération et vous des spammeurs. Activez la vérification par CAPTCHA avant de réactiver la fédération ! Voir les instructions dans le Config Panel"
     default = false
+
+    [main.registration.registration_token]
+    type = "string"
+    visible = "registration"
+    ask.en = "What should your registration token be? (leave blank to generate a random one)"
+    help.en = "This is essentially a password that registering users must input before they can create an account"
+    optional = true
 
 [resources]
 
     [resources.sources]
 
-    [resources.sources.main]
-    in_subdir = false
-    extract = false
-    rename = "conduwuit"
-    url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc/static-x86_64-linux-musl"
-    sha256 = "92eaed71b1a349ac9cc5792fe176bf84ab5e4b84774d4af1e819d5e757b1ce0c"
+        [resources.sources.main]
+        in_subdir = false
+        extract = false
+        rename = "conduwuit"
 
-    # autoupdate.strategy = "latest_github_tag"
+        amd64.url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc/static-x86_64-linux-musl"
+        amd64.sha256 = "92eaed71b1a349ac9cc5792fe176bf84ab5e4b84774d4af1e819d5e757b1ce0c"
+
+        arm64.url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc/static-aarch64-linux-musl"
+        arm64.sha256 = "0c13128a6f001118c131dafe50ec99b16629eed8515dfc4c4070d23f458329f6"
+
+        autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
 
     [resources.data_dir]
-    
+
     [resources.install_dir]
 
     [resources.permissions]
     main.url = "/"
     main.show_tile = false
 
-    server_api.url = "__DOMAIN__/_matrix"
+    server_api.url = "/_matrix"
     server_api.label = "Server access for client apps."
     server_api.show_tile = false
     server_api.allowed = "visitors"
     server_api.auth_header = false
     server_api.protected = true
 
-    server_client_infos.url = "__SERVER_NAME__/.well-known/matrix"
+    server_client_infos.url = "/.well-known/matrix"
     server_client_infos.label = "Server info for federation. (well-known)"
     server_client_infos.show_tile = false
     server_client_infos.allowed = "visitors"
@@ -92,3 +106,7 @@ ram.runtime = "50M"
     server_client_infos.protected = true
 
     [resources.ports]
+    conduwuit.default = 8008
+
+    conduwuit_tls.default = 8448
+    conduwuit_tls.exposed = "TCP"

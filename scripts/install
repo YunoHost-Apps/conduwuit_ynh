@@ -1,10 +1,23 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
 source _common.sh
 source /usr/share/yunohost/helpers
 
+#=================================================
+# RETRIEVE ARGUMENTS FROM THE MANIFEST
+#=================================================
+
 federation="true"
-ynh_app_setting_set --key=federation --value=$federation
+
+#=================================================
+# STORE SETTINGS FROM MANIFEST
+#=================================================
+
+ynh_app_setting_set --app=$app --key=federation --value=$federation
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -13,9 +26,18 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-sudo chown -R $app:root "$install_dir"
-sudo chmod -R 755 "$install_dir"
-sudo chmod 700 "$install_dir"
+chown -R "$app:root" "$install_dir"
+chmod +x "$install_dir/conduwuit"
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
+
+chmod 400 "$install_dir/conduwuit.toml"
+chown "$app:$app" "$install_dir/conduwuit.toml"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -32,24 +54,14 @@ ynh_config_add_nginx
 
 ynh_config_add_systemd
 
-yunohost service add "$app" --description="Chat server powered by Matrix" --log="/var/log/$app/$app.log"
-
-#=================================================
-# APP INITIAL CONFIGURATION
-#=================================================
-ynh_script_progression "Adding $app's configuration files..."
-
-ynh_config_add --template="conduwuit.toml" --destination="$install_dir/conduwuit.toml"
-
-chmod 400 "$install_dir/conduwuit.toml"
-chown $app:root "$install_dir/conduwuit.toml"
+yunohost service add $app --description="Chat server powered by Matrix" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path=systemd
+ynh_systemctl --service="$app" --action="start" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT

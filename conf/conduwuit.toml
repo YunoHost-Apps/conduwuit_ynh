@@ -77,7 +77,10 @@ trusted_servers = ["matrix.org"]
 
 # This is the only directory where conduwuit will save its data, including media.
 # Note: this was previously "/var/lib/matrix-conduit"
-database_path = "__INSTALL_DIR__/"
+database_path = "__INSTALL_DIR__/db"
+
+# Database backend: Only rocksdb is supported.
+database_backend = "rocksdb"
 
 
 ### Network
@@ -89,7 +92,7 @@ database_path = "__INSTALL_DIR__/"
 # To listen on multiple ports, specify a vector e.g. [8080, 8448]
 #
 # default if unspecified is 8008
-port = __PORT__
+port = __PORT_CONDUWUIT__
 
 # default address (IPv4 or IPv6) conduwuit will listen on. Generally you want this to be
 # localhost (127.0.0.1 / ::1). If you are using Docker or a container NAT networking setup, you
@@ -136,27 +139,27 @@ brotli_compression = false
 # Please be aware that this is *not* a guarantee. You should be using a firewall with zones as doing this on the application layer may have bypasses.
 #
 # Currently this does not account for proxies in use like Synapse does.
-ip_range_denylist = [
-    "127.0.0.0/8",
-    "10.0.0.0/8",
-    "172.16.0.0/12",
-    "192.168.0.0/16",
-    "100.64.0.0/10",
-    "192.0.0.0/24",
-    "169.254.0.0/16",
-    "192.88.99.0/24",
-    "198.18.0.0/15",
-    "192.0.2.0/24",
-    "198.51.100.0/24",
-    "203.0.113.0/24",
-    "224.0.0.0/4",
-    "::1/128",
-    "fe80::/10",
-    "fc00::/7",
-    "2001:db8::/32",
-    "ff00::/8",
-    "fec0::/10",
-]
+# ip_range_denylist = [
+#     "127.0.0.0/8",
+#     "10.0.0.0/8",
+#     "172.16.0.0/12",
+#     "192.168.0.0/16",
+#     "100.64.0.0/10",
+#     "192.0.0.0/24",
+#     "169.254.0.0/16",
+#     "192.88.99.0/24",
+#     "198.18.0.0/15",
+#     "192.0.2.0/24",
+#     "198.51.100.0/24",
+#     "203.0.113.0/24",
+#     "224.0.0.0/4",
+#     "::1/128",
+#     "fe80::/10",
+#     "fc00::/7",
+#     "2001:db8::/32",
+#     "ff00::/8",
+#     "fec0::/10",
+# ]
 
 
 ### Moderation / Privacy / Security
@@ -205,7 +208,8 @@ allow_registration = __REGISTRATION__
 # A static registration token that new users will have to provide when creating
 # an account. If unset and `allow_registration` is true, registration is open
 # without any condition. YOU NEED TO EDIT THIS.
-registration_token = "change this token for something specific to your server"
+registration_token = "__REGISTRATION_TOKEN__"
+
 
 # controls whether federation is allowed or not
 # defaults to true
@@ -367,7 +371,7 @@ allow_profile_lookup_federation_requests = true
 # for any new announcements made. Despite the name, this is not an update check
 # endpoint, it is simply an announcement check endpoint.
 # Defaults to false.
-allow_check_for_updates = true
+#allow_check_for_updates = false
 
 # Set to false to disable users from joining or creating room versions that aren't 100% officially supported by conduwuit.
 # conduwuit officially supports room versions 6 - 10. conduwuit has experimental/unstable support for 3 - 5, and 11.
