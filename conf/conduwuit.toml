@@ -208,7 +208,7 @@ allow_registration = __REGISTRATION__
 # A static registration token that new users will have to provide when creating
 # an account. If unset and `allow_registration` is true, registration is open
 # without any condition. YOU NEED TO EDIT THIS.
-registration_token = __REGISTRATION_TOKEN__
+registration_token = "__REGISTRATION_TOKEN__"
 
 
 # controls whether federation is allowed or not
