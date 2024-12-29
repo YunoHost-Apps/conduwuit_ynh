@@ -60,17 +60,17 @@ ynh_config_add_systemd
 yunohost service add $app --description="Chat server powered by Matrix" --log="/var/log/$app/$app.log"
 
 #=================================================
-# CREATE ADMIN USER
-#=================================================
-
-myynh_add_user $admin $password
-
-#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="start" --log_path="systemd"
+
+#=================================================
+# CREATE ADMIN USER
+#=================================================
+
+myynh_add_user $admin $password
 
 #=================================================
 # END OF SCRIPT
