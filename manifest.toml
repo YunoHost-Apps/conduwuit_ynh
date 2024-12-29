@@ -48,8 +48,8 @@ arbitrary-limitations.en = "Conduwuit is currently in beta. This means you can j
     type = "domain"
     ask.en = "Select the display name for your Conduwuit server"
     ask.fr = "Sélectionnez le nom d'affichage pour votre serveur Conduwuit"
-    help.en = "If you choose domain.tld, your Matrix user-ids will be looking like @user:domain.tld instead of @user:conduit.domain.tld"
-    help.fr = "Si vous choisissez domain.tld, vos identifiants Matrix ressembleront à @utilisateur:domain.tld plutôt que @utilisateur:conduit.domain.tld"
+    help.en = "If you choose domain.tld, your Matrix user-ids will be looking like @user:domain.tld instead of @user:conduwuit.domain.tld"
+    help.fr = "Si vous choisissez domain.tld, vos identifiants Matrix ressembleront à @utilisateur:domain.tld plutôt que @utilisateur:conduwuit.domain.tld"
 
     [install.registration]
     type = "boolean"
