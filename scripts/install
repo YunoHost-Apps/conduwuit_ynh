@@ -69,6 +69,7 @@ ynh_systemctl --service="$app" --action="start" --log_path="systemd"
 #=================================================
 # CREATE ADMIN USER
 #=================================================
+ynh_script_progression "Adding admin user..."
 
 myynh_add_user $admin $password
 
