@@ -49,21 +49,21 @@ services = ["__APP__"]
             # the button is clickable only once the previous values are provided
             enabled = "username && password"
 
-            [main.users.deactivate]
-            name = "Deactivate a user. (WARNING: This prevents them from ever logging in again)"
-                [main.users.deactivate.username]
-                type = "string"
-                bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
-                ask = "username"
+        [main.users.deactivate]
+        name = "Deactivate a user. (WARNING: This prevents them from ever logging in again)"
+            [main.users.deactivate.username]
+            type = "string"
+            bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
+            ask = "username"
 
-                [main.users.deactivate.confirm]
-                type = "boolean"
-                yes = "I understand"
-                no = "What I'm confused ?? (look above)"
-                ask = "I understand what deactivating a user means and I would like to proceed"
+            [main.users.deactivate.confirm]
+            type = "boolean"
+            yes = "I understand"
+            no = "What I'm confused ?? (look above)"
+            ask = "I understand what deactivating a user means and I would like to proceed"
 
-                [main.users.deactivate.deactivate_user]
-                type = "button"
-                # the button is clickable only once the previous values are provided
-                enabled = "username && confirm"
-                ask = "PERMANENTLY DEACTIVATE USER"
+            [main.users.deactivate.deactivate_user]
+            type = "button"
+            # the button is clickable only once the previous values are provided
+            enabled = "username && confirm"
+            ask = "PERMANENTLY DEACTIVATE USER"
