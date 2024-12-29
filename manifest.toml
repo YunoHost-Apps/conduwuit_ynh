@@ -4,8 +4,7 @@ packaging_format = 2
 
 id = "conduwuit"
 name = "Conduwuit"
-description.en = "Simple, fast and reliable chat server powered by Matrix"
-description.fr = "Serveur de chat simple, rapide et fiable alimenté par Matrix"
+description.en = "A very cool, featureful fork of conduit, A lightweight, open source Matrix server."
 
 version = "v0.5.0-rc~ynh1"
 
@@ -32,6 +31,9 @@ disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
 
+[antifeatures]
+arbitrary-limitations.en = "Conduwuit is currently in beta. This means you can join and participate in most Matrix rooms, but not all features are supported and you might run into some bugs."
+
 [install]
     [install.domain]
     type = "domain"
@@ -56,6 +58,9 @@ ram.runtime = "50M"
     help.en = "If no, accounts should be registered by an admin after defining a secret. If yes, to protect your server and the federation from spammer, federation will be deactived by default. You must Activate CAPTCHA verification before federation reactivation. See Config Panel for instructions"
     help.fr = "Si non, les comptes seront créés par un admin après avoir défini un secret. Si oui, la fédération sera désactivée pour protéger la fédération et vous des spammeurs. Activez la vérification par CAPTCHA avant de réactiver la fédération ! Voir les instructions dans le Config Panel"
     default = false
+
+    [install.admin]
+    type = "user"
 
 [resources]
 

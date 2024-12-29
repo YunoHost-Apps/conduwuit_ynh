@@ -54,7 +54,7 @@ RuntimeDirectoryMode=0750
 Restart=on-failure
 RestartSec=5
 
-TimeoutStopSec=2m
+TimeoutStopSec=5
 TimeoutStartSec=2m
 
 StartLimitInterval=1m
