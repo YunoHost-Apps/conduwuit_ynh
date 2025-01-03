@@ -843,7 +843,10 @@ new_user_displayname_suffix = "__ACCOUNT_SUFFIX__"
 # vector list of TURN URIs/servers to use
 #
 # No default
-turn_uris = ["turn:__DOMAIN__?transport=udp", "turn:__DOMAIN__?transport=tcp"]
+turn_uris = [
+     "turn:__DOMAIN__:__PORT_TURNSERVER__?transport=udp",
+     "turn:__DOMAIN__:__PORT_TURNSERVER__?transport=tcp"
+]
 
 # TURN secret to use for generating the HMAC-SHA1 hash apart of username and password generation
 #
@@ -855,7 +858,7 @@ turn_secret = "__TURN_PASSWORD__"
 # TURN username to provide the client
 #
 # no default
-#turn_username = ""
+turn_username = "turnserver"
 
 # TURN password to provide the client
 #
