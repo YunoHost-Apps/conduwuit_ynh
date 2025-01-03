@@ -58,6 +58,12 @@ arbitrary-limitations.en = "Conduwuit is currently in beta. This means you can j
     help.en = "A configurable invite token must be given to new users to register (A default one is generated during install)"
     default = false
 
+    [install.sync_users]
+    type = "boolean"
+    ask.en = "Should new yunohost users be automatically added"
+    help.en = "This will automatically create accounts for any yunohost users added after installation, restarting the server in the process"
+    default = true
+
     [install.admin]
     type = "user"
 

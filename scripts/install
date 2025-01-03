@@ -21,6 +21,7 @@ registration_token=$(ynh_string_random --length=8)
 
 ynh_app_setting_set --app=$app --key=federation --value=$federation
 ynh_app_setting_set --key=registration_token --value=$registration_token
+ynh_app_setting_set --key=sync_users --value=$sync_users
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE

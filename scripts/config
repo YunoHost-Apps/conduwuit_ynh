@@ -1,16 +1,12 @@
 #!/bin/bash
 
-source ./_common.sh
-source /usr/share/yunohost/helpers
-
-run__add_user() {
-    myynh_add_user $username $password
-}
-
-run__deactivate_user() {
-    ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
-    cd $install_dir
-    timeout --preserve-status --foreground --kill-after=10 10 ./conduwuit -c conduwuit.toml --execute "users deactivate $username" --execute "server shutdown"
-    # Uses the timeout command due to this issue: https://github.com/girlbossceo/conduwuit/issues/649
-    ynh_systemctl --service="$app" --action="start" --log_path="systemd"
-}
+# source ./_common.sh
+# source /usr/share/yunohost/helpers
+#
+# run__add_user() {
+#     myynh_add_user $username $password
+# }
+#
+# run__deactivate_user() {
+#     myynh_deactivate_user $username
+# }

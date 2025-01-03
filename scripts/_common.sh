@@ -23,3 +23,12 @@ myynh_add_user() {
   # Uses the timeout command due to this issue: https://github.com/girlbossceo/conduwuit/issues/649
   ynh_systemctl --service="$app" --action="start" --log_path="systemd"
 }
+
+myynh_deactivate_user() {
+  local username="$1"
+  ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
+  cd $install_dir
+  timeout --preserve-status --foreground --kill-after=10 10 ./conduwuit -c conduwuit.toml --execute "users deactivate $username" --execute "server shutdown"
+  # Uses the timeout command due to this issue: https://github.com/girlbossceo/conduwuit/issues/649
+  ynh_systemctl --service="$app" --action="start" --log_path="systemd"
+}

@@ -30,42 +30,47 @@ services = ["__APP__"]
         help = "Communicate with other homeservers of the Matrix Federation."
         bind = "allow_federation:__INSTALL_DIR__/conduwuit.toml"
         default = "__FEDERATION__"
-
-
-    [main.users_add]
-    name = "Add a user (NOTE: These actions will shut down your server for a very short time then restart it)"
-        [main.users_add.username]
-        type = "string"
-        bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
-        ask = "username"
-
-        [main.users_add.password]
-        type = "password"
-        bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
-        ask = "password"
-
-        [main.users_add.add_user]
-        type = "button"
-        ask = "Add"
-        # the button is clickable only once the previous values are provided
-        enabled = "username && password"
-
-    [main.users_deactivate]
-    name = "Deactivate a user (WARNING: This prevents them from ever logging in again)"
-        [main.users_deactivate.username]
-        type = "string"
-        bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
-        ask = "username"
-
-        [main.users_deactivate.confirm]
-        type = "boolean"
-        yes = "I understand"
-        no = "What I'm confused ?? (look above)"
-        ask = "I understand what deactivating a user means and I would like to proceed"
-
-        [main.users_deactivate.deactivate_user]
-        type = "button"
-        # the button is clickable only once the previous values are provided
-        enabled = "username && confirm"
-        style = "warning"
-        ask = "PERMANENTLY DEACTIVATE USER"
+        
+    # This config panel section has been removed as the actions can be done
+    # without restarting the server using the admin chat
+    #
+    # If re-added, this panel will need to be separated into a user_management.users.action
+    # rather than main.users_action
+    #
+    # [main.users_add]
+    # name = "Add a user (NOTE: These actions will shut down your server for a very short time then restart it)"
+    #     [main.users_add.username]
+    #     type = "string"
+    #     bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
+    #     ask = "username"
+    #
+    #     [main.users_add.password]
+    #     type = "password"
+    #     bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
+    #     ask = "password"
+    #
+    #     [main.users_add.add_user]
+    #     type = "button"
+    #     ask = "Add"
+    #     # the button is clickable only once the previous values are provided
+    #     enabled = "username && password"
+    #
+    # [main.users_deactivate]
+    # name = "Deactivate a user (WARNING: This prevents them from ever logging in again)"
+    #     [main.users_deactivate.username]
+    #     type = "string"
+    #     bind = "null" # this value won't be saved as a setting, it's ephemeral and only relevant for the action
+    #     ask = "username"
+    #
+    #     [main.users_deactivate.confirm]
+    #     type = "boolean"
+    #     yes = "I understand"
+    #     no = "What I'm confused ?? (look above)"
+    #     ask = "I understand what deactivating a user means and I would like to proceed"
+    #
+    #     [main.users_deactivate.deactivate_user]
+    #     type = "button"
+    #     # the button is clickable only once the previous values are provided
+    #     enabled = "username && confirm"
+    #     style = "warning"
+    #     ask = "PERMANENTLY DEACTIVATE USER"
