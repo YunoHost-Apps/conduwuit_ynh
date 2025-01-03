@@ -13,15 +13,18 @@ source /usr/share/yunohost/helpers
 
 federation="true"
 registration_token=$(ynh_string_random --length=8)
-
+account_suffix=""
 
 #=================================================
 # STORE SETTINGS FROM MANIFEST
 #=================================================
 
-ynh_app_setting_set --app=$app --key=federation --value=$federation
+ynh_app_setting_set --key=federation --value=$federation
 ynh_app_setting_set --key=registration_token --value=$registration_token
 ynh_app_setting_set --key=sync_users --value=$sync_users
+ynh_app_setting_set --key=account_suffix --value=$account_suffix
+ynh_app_setting_set --key=jitsi_server --value=$jitsi_server
+ynh_app_setting_set --key=server_name --value=$server_name
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE

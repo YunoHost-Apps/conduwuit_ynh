@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# source ./_common.sh
-# source /usr/share/yunohost/helpers
+source ./_common.sh
+source /usr/share/yunohost/helpers
 #
 # run__add_user() {
 #     myynh_add_user $username $password
@@ -10,3 +10,15 @@
 # run__deactivate_user() {
 #     myynh_deactivate_user $username
 # }
+
+#=================================================
+# CONFIG PANEL VARIABLES
+#=================================================
+
+install_dir=$(ynh_app_setting_get --key=install_dir)
+server_name=$(ynh_app_setting_get --key=server_name)
+registration_token=$(ynh_app_setting_get --key=registration_token)
+federation=$(ynh_app_setting_get --key=federation)
+sync_users=$(ynh_app_setting_get --key=sync_users)
+account_suffix=$(ynh_app_setting_get --key=account_suffix)
+jitsi_server=$(ynh_app_setting_get --key=jitsi_server)

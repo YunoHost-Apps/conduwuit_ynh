@@ -379,7 +379,7 @@ allow_profile_lookup_federation_requests = true
 # This was the lightning bolt emoji option, just replaced with support for adding your own custom text or emojis.
 # To disable, set this to "" (an empty string)
 # Defaults to "🏳️‍⚧️" (trans pride flag)
-#new_user_displayname_suffix = "🏳️‍⚧️"
+new_user_displayname_suffix = "__ACCOUNT_SUFFIX__"
 
 # Option to control whether conduwuit will query your list of trusted notary key servers (`trusted_servers`) for
 # remote homeserver signing keys it doesn't know *first*, or query the individual servers first before falling back to the trusted
