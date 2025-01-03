@@ -12,7 +12,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 federation="true"
-registration_token=$(ynh_string_random --length=8)
+registration_token="$(ynh_string_random --length=8)"
 account_suffix=""
 
 #=================================================
@@ -36,6 +36,18 @@ ynh_setup_source --dest_dir="$install_dir"
 chown -R "$app:root" "$install_dir"
 chmod +x "$install_dir/conduwuit"
 
+#=================================================
+# INSTALL COTURN IF NOT INSTALLED
+#=================================================
+# This is taken from https://github.com/YunoHost-Apps/prosody_ynh/blob/testing/scripts/install#L15C1-L22C79
+if ! yunohost app list | grep -q "id: coturn"; then
+        echo "Coturn is not installed. Installing... "
+        yunohost tools update
+        yunohost app install https://github.com/anubister/coturn_ynh --force --args "domain=$domain"
+fi
+
+turn_password=$(ynh_app_setting_get --app="coturn" --key=turnserver_pwd)
+turn_external_port=$(ynh_app_setting_get --app="coturn" --key=port_turnserver)
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================

@@ -14,11 +14,11 @@ services = ["__APP__"]
         no = "false"
         bind = "allow_registration:__INSTALL_DIR__/conduwuit.toml"
 
-        [main.registration.registration_token]
-        ask.en = "What should your registration token be?"
-        visible = "registration"
-        type = "string"
-        bind = "registration_token:__INSTALL_DIR__/conduwuit.toml"
+        # [main.registration.registration_token]
+        # ask.en = "What should your registration token be?"
+        # visible = "registration"
+        # type = "string"
+        # bind = "registration_token:__INSTALL_DIR__/conduwuit.toml"
 
         [main.registration.federation]
         ask.en = "Allow Federation"
@@ -28,22 +28,22 @@ services = ["__APP__"]
         help = "Communicate with other homeservers of the Matrix Federation."
         bind = "allow_federation:__INSTALL_DIR__/conduwuit.toml"
 
-        [main.registration.account_suffix]
-        ask.en = "Text/emoji to automatically add to the end all display names? (leave blank for nothing)"
-        type = "string"
-        help = "This is not permanent and can be changed by the user"
-        bind = "new_user_displayname_suffix:__INSTALL_DIR__/conduwuit.toml"
+        # [main.registration.account_suffix]
+        # ask.en = "Text/emoji to automatically add to the end all display names? (leave blank for nothing)"
+        # type = "string"
+        # help = "This is not permanent and can be changed by the user"
+        # bind = "new_user_displayname_suffix:__INSTALL_DIR__/conduwuit.toml"
 
-    [main.servers]
-    name = "External services to connect to"
-
-        [main.servers.jitsi_server]
-        ask.en = "Jitsi server address for conferencing?"
-        ask.fr = "Adresse du serveur Jitsi pour les conférences ?"
-        type = "string"
-        example = "domain.org"
-        bind = "im.vector.riot.jitsi>preferredDomain:/etc/nginx/conf.d/__SERVER_NAME__.d/__APP___server_name.conf"
-        default = "jitsi.riot.im"
+    # [main.servers]
+    # name = "External services to connect to"
+    #
+    #     [main.servers.jitsi_server]
+    #     ask.en = "Jitsi server address for conferencing?"
+    #     ask.fr = "Adresse du serveur Jitsi pour les conférences ?"
+    #     type = "string"
+    #     example = "domain.org"
+    #     bind = "im.vector.riot.jitsi>preferredDomain:/etc/nginx/conf.d/__SERVER_NAME__.d/__APP___server_name.conf"
+    #     default = "jitsi.riot.im"
 
     # This config panel section has been removed as the actions can be done
     # without restarting the server using the admin chat

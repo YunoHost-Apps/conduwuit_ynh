@@ -62,7 +62,7 @@ arbitrary-limitations.en = "Conduwuit is currently in beta. This means you can j
     type = "boolean"
     ask.en = "Should new yunohost users be automatically added"
     help.en = "This will automatically create accounts for any yunohost users added after installation, restarting the server in the process"
-    default = true
+    default = false
 
     [install.jitsi_server]
     ask.en = "Jitsi server address for conferencing?"
