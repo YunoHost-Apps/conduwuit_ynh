@@ -858,7 +858,7 @@ turn_secret = "__TURN_PASSWORD__"
 # TURN username to provide the client
 #
 # no default
-turn_username = "turnserver"
+# turn_username = "turnserver"
 
 # TURN password to provide the client
 #
