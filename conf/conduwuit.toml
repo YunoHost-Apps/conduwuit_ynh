@@ -844,8 +844,8 @@ new_user_displayname_suffix = "__ACCOUNT_SUFFIX__"
 #
 # No default
 turn_uris = [
-     "turn:__DOMAIN__:__PORT_TURNSERVER__?transport=udp",
-     "turn:__DOMAIN__:__PORT_TURNSERVER__?transport=tcp"
+     "turn:__DOMAIN__:__TURN_EXTERNAL_PORT?transport=udp",
+     "turn:__DOMAIN__:__TURN_EXTERNAL_PORT?transport=tcp"
 ]
 
 # TURN secret to use for generating the HMAC-SHA1 hash apart of username and password generation
