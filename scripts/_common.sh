@@ -23,11 +23,3 @@ myynh_add_user() {
   ynh_exec_and_print_stderr_only_if_error ./conduwuit -c conduwuit.toml --execute "users create-user $username $password" --execute "server shutdown"
   ynh_systemctl --service="$app" --action="start" --log_path="systemd"
 }
-
-myynh_deactivate_user() {
-  local username="$1"
-  ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
-  cd $install_dir
-  ./conduwuit -c conduwuit.toml --execute "users deactivate $username" --execute "server shutdown"
-  ynh_systemctl --service="$app" --action="start" --log_path="systemd"
-}
