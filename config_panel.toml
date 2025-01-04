@@ -42,7 +42,7 @@ services = ["__APP__"]
         [main.registration.sync_user_delete]
         type = "boolean"
         visible = "sync_user_create"
-        ask.en = "Should their conduwuit accounts also be deactivated their yunohost accounts are deleted"
+        ask.en = "Should their conduwuit accounts also be deactivated when deleted"
         help.en = "WARNING! This will PERMANENTLY deactivate accounts, meaning conduwuit users with the same username can never be created again"
     # Commented out because it prevents the config panel from loading
     # [main.servers]
