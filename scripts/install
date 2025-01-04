@@ -27,6 +27,13 @@ ynh_app_setting_set --key=jitsi_server --value=$jitsi_server
 ynh_app_setting_set --key=server_name --value=$server_name
 
 #=================================================
+# SETUP HOOKS
+#=================================================
+
+ynh_replace --match="__APP__" --replace="$app" --file="../hooks/post_user_create"
+ynh_replace --match="__INSTALL_DIR__" --replace="$install_dir" --file="../hooks/post_user_create"
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."

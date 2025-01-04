@@ -1,9 +1,10 @@
 #!/bin/bash
-
-source ./_common.sh
 source /usr/share/yunohost/helpers
 
-
-if [ "$(ynh_app_setting_get --key=sync_users)" -eq 1 ]; then
-    myynh_deactivate_user $YNH_USER_USERNAME
+if [ "$(ynh_app_setting_get --app=__APP__ --key=sync_users)" -eq 1 ]; then
+    yunohost service stop __APP__
+    cd __INSTALL_DIR__
+    # ynh_exec_and_print_stderr_only_if_error hides the log from conduit which would display the password
+    ynh_exec_and_print_stderr_only_if_error ./conduwuit -c conduwuit.toml --execute "users create-user $YNH_USER_USERNAME $YNH_USER_PASSWORD" --execute "server shutdown"
+    yunohost service start __APP__
 fi

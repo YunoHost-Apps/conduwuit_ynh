@@ -34,6 +34,11 @@ services = ["__APP__"]
         help = "This is not permanent and can be changed by the user"
         bind = "new_user_displayname_suffix:__INSTALL_DIR__/conduwuit.toml"
 
+        [main.registration.sync_users]
+        type = "boolean"
+        ask.en = "Should new yunohost users be automatically added"
+        help.en = "This will automatically create accounts for any yunohost users added after installation, restarting the server in the process"
+
     # Commented out because it prevents the config panel from loading
     # [main.servers]
     # name = "External services to connect to"

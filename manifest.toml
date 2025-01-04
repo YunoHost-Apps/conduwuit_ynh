@@ -6,7 +6,7 @@ id = "conduwuit"
 name = "Conduwuit"
 description.en = "A very cool, featureful fork of conduit, A lightweight, open source Matrix server."
 
-version = "v0.5.0-rc~ynh1"
+version = "v0.5.0-rc2~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -87,11 +87,11 @@ arbitrary-limitations.en = "Conduwuit is currently in beta. This means you can j
         extract = false
         rename = "conduwuit"
 
-        amd64.url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc/static-x86_64-linux-musl"
-        amd64.sha256 = "92eaed71b1a349ac9cc5792fe176bf84ab5e4b84774d4af1e819d5e757b1ce0c"
+        amd64.url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc2/static-x86_64-linux-musl"
+        amd64.sha256 = "aafddff210745880e100818977ddeb1c8b43cff466adabb32d284354d0c5a9c5"
 
-        arm64.url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc/static-aarch64-linux-musl"
-        arm64.sha256 = "0c13128a6f001118c131dafe50ec99b16629eed8515dfc4c4070d23f458329f6"
+        arm64.url = "https://github.com/girlbossceo/conduwuit/releases/download/v0.5.0-rc2/static-aarch64-linux-musl"
+        arm64.sha256 = "06ca826b8d56581e8cc7d89e2f8ab4705a4a3791890496b9fb9fcbe204b65b02"
 
         autoupdate.strategy = "latest_github_release"
 
