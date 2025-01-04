@@ -100,7 +100,7 @@ port = __PORT_CONDUWUIT__
 address = "127.0.0.1"
 
 # Max request size for file uploads
-max_request_size = 20_000_000 # in bytes
+max_request_size = 100_000_000 # in bytes
 
 # Uncomment unix_socket_path to listen on a UNIX socket at the specified path.
 # If listening on a UNIX socket, you must remove/comment the 'address' key if defined and add your
