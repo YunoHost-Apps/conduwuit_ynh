@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+if [ "$(ynh_app_setting_get --app=__APP__ --key=sync_user_delete)" -eq 1 ]; then
+    yunohost service stop __APP__
+    ynh_print_info "Deactivating the Conduwuit user"
+    cd __INSTALL_DIR__
+    ./conduwuit -c conduwuit.toml --execute "users deactivate $1" --execute "server shutdown"
+    yunohost service start __APP__
+fi

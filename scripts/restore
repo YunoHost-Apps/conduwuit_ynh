@@ -30,6 +30,8 @@ then
 fi
 
 ynh_restore "/etc/yunohost/hooks.d/post_user_create/50-$app"
+ynh_restore "/etc/yunohost/hooks.d/post_user_delete/50-$app"
+
 
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet

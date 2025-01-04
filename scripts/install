@@ -21,7 +21,8 @@ account_suffix=""
 
 ynh_app_setting_set --key=federation --value=$federation
 ynh_app_setting_set --key=registration_token --value=$registration_token
-ynh_app_setting_set --key=sync_users --value=$sync_users
+ynh_app_setting_set --key=sync_user_create --value=$sync_user_create
+ynh_app_setting_set --key=sync_user_delete --value=$sync_user_delete
 ynh_app_setting_set --key=account_suffix --value=$account_suffix
 ynh_app_setting_set --key=jitsi_server --value=$jitsi_server
 ynh_app_setting_set --key=server_name --value=$server_name
@@ -32,6 +33,8 @@ ynh_app_setting_set --key=server_name --value=$server_name
 
 ynh_replace --match="__APP__" --replace="$app" --file="../hooks/post_user_create"
 ynh_replace --match="__INSTALL_DIR__" --replace="$install_dir" --file="../hooks/post_user_create"
+ynh_replace --match="__APP__" --replace="$app" --file="../hooks/post_user_delete"
+ynh_replace --match="__INSTALL_DIR__" --replace="$install_dir" --file="../hooks/post_user_delete"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE

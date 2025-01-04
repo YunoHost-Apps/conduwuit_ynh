@@ -33,6 +33,7 @@ fi
 
 # Backup hooks
 ynh_backup "/etc/yunohost/hooks.d/post_user_create/50-$app"
+ynh_backup "/etc/yunohost/hooks.d/post_user_delete/50-$app"
 
 #=================================================
 # END OF SCRIPT

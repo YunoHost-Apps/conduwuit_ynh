@@ -46,6 +46,8 @@ chown "$app:$app" "$install_dir/conduwuit.toml"
 
 ynh_replace --match="__APP__" --replace="$app" --file="../hooks/post_user_create"
 ynh_replace --match="__INSTALL_DIR__" --replace="$install_dir" --file="../hooks/post_user_create"
+ynh_replace --match="__APP__" --replace="$app" --file="../hooks/post_user_delete"
+ynh_replace --match="__INSTALL_DIR__" --replace="$install_dir" --file="../hooks/post_user_delete"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS

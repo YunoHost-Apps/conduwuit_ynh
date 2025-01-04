@@ -1,7 +1,7 @@
 #!/bin/bash
 source /usr/share/yunohost/helpers
 
-if [ "$(ynh_app_setting_get --app=__APP__ --key=sync_users)" -eq 1 ]; then
+if [ "$(ynh_app_setting_get --app=__APP__ --key=sync_user_create)" -eq 1 ]; then
     yunohost service stop __APP__
     ynh_print_info "Adding a Conduwuit user"
     cd __INSTALL_DIR__
