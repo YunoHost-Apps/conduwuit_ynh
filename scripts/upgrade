@@ -11,7 +11,7 @@ source /usr/share/yunohost/helpers
 # FETCH VARIABLES FOR CONFIG
 #=================================================
 turn_password=$(ynh_app_setting_get --app="coturn" --key=turnserver_pwd)
-turn_external_port=$(ynh_app_setting_get --app="coturn" --key=port_turnserver)
+turn_external_port=$(ynh_app_setting_get --app="coturn" --key=port_turnserver_tls)
 
 #=================================================
 # STOP SYSTEMD SERVICE
