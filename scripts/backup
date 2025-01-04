@@ -32,7 +32,7 @@ if [ -e "/etc/nginx/conf.d/${server_name}.d/${app}_server_name.conf" ]; then
 fi
 
 # Backup hooks
-ynh_backup --src_path="/etc/yunohost/hooks.d/post_user_create/50-$app"
+ynh_backup "/etc/yunohost/hooks.d/post_user_create/50-$app"
 
 #=================================================
 # END OF SCRIPT
