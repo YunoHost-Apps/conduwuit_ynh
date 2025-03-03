@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Conduwuit untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/conduwuit.svg)](https://ci-apps.yunohost.org/ci/apps/conduwuit/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/conduwuit.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/conduwuit.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/conduwuit)](https://ci-apps.yunohost.org/ci/apps/conduwuit/)
+![Status kerja](https://apps.yunohost.org/badge/state/conduwuit)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/conduwuit)
 
 [![Pasang Conduwuit dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=conduwuit)
 

@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Conduwuit YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/conduwuit.svg)](https://ci-apps.yunohost.org/ci/apps/conduwuit/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/conduwuit.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/conduwuit.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/conduwuit)](https://ci-apps.yunohost.org/ci/apps/conduwuit/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/conduwuit)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/conduwuit)
 
 [![Instalatu Conduwuit YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=conduwuit)
 
