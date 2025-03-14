@@ -5,7 +5,9 @@
 
 # Conduwuit для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/conduwuit.svg)](https://ci-apps.yunohost.org/ci/apps/conduwuit/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/conduwuit.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/conduwuit.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/conduwuit)](https://ci-apps.yunohost.org/ci/apps/conduwuit/)
+![Состояние работы](https://apps.yunohost.org/badge/state/conduwuit)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/conduwuit)
 
 [![Установите Conduwuit с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=conduwuit)
 

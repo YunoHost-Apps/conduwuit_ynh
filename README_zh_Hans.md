@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Conduwuit
 
-[![集成程度](https://dash.yunohost.org/integration/conduwuit.svg)](https://ci-apps.yunohost.org/ci/apps/conduwuit/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/conduwuit.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/conduwuit.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/conduwuit)](https://ci-apps.yunohost.org/ci/apps/conduwuit/)
+![工作状态](https://apps.yunohost.org/badge/state/conduwuit)
+![维护状态](https://apps.yunohost.org/badge/maintained/conduwuit)
 
 [![使用 YunoHost 安装 Conduwuit](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=conduwuit)
 

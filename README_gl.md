@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Conduwuit para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/conduwuit.svg)](https://ci-apps.yunohost.org/ci/apps/conduwuit/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/conduwuit.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/conduwuit.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/conduwuit)](https://ci-apps.yunohost.org/ci/apps/conduwuit/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/conduwuit)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/conduwuit)
 
 [![Instalar Conduwuit con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=conduwuit)
 
