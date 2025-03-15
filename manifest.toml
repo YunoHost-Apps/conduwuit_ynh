@@ -76,7 +76,6 @@ arbitrary-limitations.en = "Conduwuit is currently in beta. This means you can j
 
     [install.password]
     type = "password"
-    ask.en = "Enter the password for the admin account"
 
 [resources]
 
