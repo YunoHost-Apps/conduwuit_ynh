@@ -14,6 +14,7 @@ source /usr/share/yunohost/helpers
 federation="true"
 registration_token="$(ynh_string_random --length=8)"
 account_suffix=""
+sync_user_delete=0
 
 #=================================================
 # STORE SETTINGS FROM MANIFEST
